@@ -1,5 +1,5 @@
 {% set name = "cellpose" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
-  sha256: 5e70e056d79df3a884b86c37498a704c30daa8ec59af4b488b713b2237d3b579
+  sha256: e7b07bbe4bd9a4b73ebd238095cd0919e48d4c24e22269bc21273e19e33fd2cc
 
 build:
   entry_points:
