@@ -24,14 +24,16 @@ requirements:
     - setuptools-scm
   run:
     - fastremap
+    - imagecodecs
+    - llvmlite
     - natsort
-    - numba
+    - numba >=0.53.0
     - numpy >=1.20.0
     - opencv
     - python >=3.6
+    - pytorch >=1.6
     - scipy
     - tifffile
-    - pytorch >=1.6
     - tqdm
 
 test:
