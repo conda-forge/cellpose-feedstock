@@ -27,7 +27,7 @@ requirements:
     - fastremap
     - imagecodecs
     - llvmlite
-    - matplotlib-base
+    - matplotlib-base  # Imported but not declared as a dependency
     - natsort
     - numba >=0.53.0
     - numpy >=1.20.0
@@ -37,7 +37,7 @@ requirements:
     - tifffile
     - pytorch >=1.6
     - roifile
-    - scikit-image  # Imported but not declared as a dependency
+    - scikit-image    # Imported but not declared as a dependency
     - tqdm
     # GUI Dependencies
     - google-cloud-storage
