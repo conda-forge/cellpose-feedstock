@@ -24,7 +24,6 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - dask-core
     - fastremap
     - imagecodecs
     - llvmlite
@@ -38,13 +37,17 @@ requirements:
     - tifffile
     - pytorch >=1.6
     - roifile
-    - scikit-image
+    - scikit-image  # Imported but not declared as a dependency
     - tqdm
     # GUI Dependencies
     - google-cloud-storage
     - pyqtgraph >=0.11.0rc0
     - qtpy
     - superqt
+    # Distributed Dependencies
+    - dask-core
+    - dask-image
+    - scikit-learn
 
 test:
   imports:
