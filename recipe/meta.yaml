@@ -21,18 +21,27 @@ requirements:
     - pip
     - pytest-runner
     - python >=3.6
+    - setuptools
     - setuptools-scm
   run:
     - fastremap
+    - imagecodecs
+    - llvmlite
     - natsort
-    - numba
+    - numba >=0.53.0
     - numpy >=1.20.0
     - opencv
     - python >=3.6
     - scipy
     - tifffile
     - pytorch >=1.6
+    - roifile
     - tqdm
+    # GUI Dependencies
+    - google-cloud-storage
+    - pyqtgraph >=0.11.0rc0
+    - qtpy
+    - superqt
 
 test:
   imports:
@@ -40,16 +49,17 @@ test:
     - cellpose.core
   commands:
     - pip list
-    # - pip check
+    - pip check
     - cellpose --help
   requires:
     - pip
 
 about:
-  home: https://github.com/MouseLand/cellpose
+  home: https://pypi.org/project/cellpose
   summary: anatomical segmentation algorithm
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/MouseLand/cellpose
 
 extra:
   recipe-maintainers:
