@@ -1,5 +1,5 @@
 {% set name = "cellpose" %}
-{% set version = "2.0.5" %}
+{% set version = "2.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
-  sha256: 4bc33826e4e611dcd3c513f97d081a883b2337b995a7929c0a9267597625535a
+  sha256: 7ff63cb60a154ce3c0a17ff05ed27d2aaaa1a24a4c7a8160c0a4c15443366618
 
 build:
   entry_points:
@@ -21,18 +21,33 @@ requirements:
     - pip
     - pytest-runner
     - python >=3.6
+    - setuptools
     - setuptools-scm
   run:
     - fastremap
+    - imagecodecs
+    - llvmlite
+    - matplotlib-base  # Imported but not declared as a dependency
     - natsort
-    - numba
+    - numba >=0.53.0
     - numpy >=1.20.0
     - opencv
     - python >=3.6
     - scipy
     - tifffile
     - pytorch >=1.6
+    - roifile
+    - scikit-image    # Imported but not declared as a dependency
     - tqdm
+    # GUI Dependencies
+    - google-cloud-storage
+    - pyqtgraph >=0.11.0rc0
+    - qtpy
+    - superqt
+    # Distributed Dependencies
+    - dask-core
+    - dask-image
+    - scikit-learn
 
 test:
   imports:
@@ -40,18 +55,18 @@ test:
     - cellpose.core
   commands:
     - pip list
-    # - pip check
+    # - pip check  # Fails due to opencv-python-headless
     - cellpose --help
   requires:
     - pip
 
 about:
-  home: https://github.com/MouseLand/cellpose
+  home: https://pypi.org/project/cellpose
   summary: anatomical segmentation algorithm
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/MouseLand/cellpose
 
 extra:
   recipe-maintainers:
     - goanpeca
-    - gwaygenomics
