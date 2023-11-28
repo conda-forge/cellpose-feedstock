@@ -24,9 +24,11 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
+    - dask-core
     - fastremap
     - imagecodecs
     - llvmlite
+    - matplotlib-base
     - natsort
     - numba >=0.53.0
     - numpy >=1.20.0
@@ -36,6 +38,7 @@ requirements:
     - tifffile
     - pytorch >=1.6
     - roifile
+    - scikit-image
     - tqdm
     # GUI Dependencies
     - google-cloud-storage
