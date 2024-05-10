@@ -3,11 +3,13 @@ About cellpose-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cellpose-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/MouseLand/cellpose
+Home: https://pypi.org/project/cellpose
 
 Package license: BSD-3-Clause
 
 Summary: anatomical segmentation algorithm
+
+Development: https://github.com/MouseLand/cellpose
 
 Current build status
 ====================
@@ -143,6 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@carsen-stringer](https://github.com/carsen-stringer/)
 * [@goanpeca](https://github.com/goanpeca/)
-* [@gwaygenomics](https://github.com/gwaygenomics/)
 

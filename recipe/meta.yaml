@@ -1,5 +1,5 @@
 {% set name = "cellpose" %}
-{% set version = "2.2.3" %}
+{% set version = "3.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
-  sha256: 7ff63cb60a154ce3c0a17ff05ed27d2aaaa1a24a4c7a8160c0a4c15443366618
+  sha256: f3ccae7c128fc5444737bf92079c749fa4392a08aae62ae2f07878bfa5c5e4c4
 
 build:
   entry_points:
@@ -40,7 +40,6 @@ requirements:
     - scikit-image    # Imported but not declared as a dependency
     - tqdm
     # GUI Dependencies
-    - google-cloud-storage
     - pyqtgraph >=0.11.0rc0
     - qtpy
     - superqt
@@ -70,3 +69,4 @@ about:
 extra:
   recipe-maintainers:
     - goanpeca
+    - carsen-stringer
