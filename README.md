@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@goanpeca](https://github.com/goanpeca/)
 * [@gwaygenomics](https://github.com/gwaygenomics/)
+* [@carsen-stringer](https://github.com/carsen-stringer/)
 
