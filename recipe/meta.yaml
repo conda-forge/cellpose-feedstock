@@ -1,13 +1,13 @@
 {% set name = "cellpose" %}
-{% set version = "3.0.11" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
-  sha256: a8d902e7fe76fe0319871ac9426dd8d1d3d526f014d51c070918762939ce40db
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
+  sha256: aee5f42d34ec51bed34467c771864070e2b93905886b7a5cd61a541379a309c5
 
 build:
   entry_points:
@@ -20,7 +20,7 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
@@ -32,7 +32,7 @@ requirements:
     - numba >=0.53.0
     - numpy >=1.20.0
     - opencv
-    - python >=3.6
+    - python >={{ python_min }}
     - scipy
     - tifffile
     - pytorch >=1.6
@@ -58,6 +58,7 @@ test:
     - cellpose --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/cellpose
