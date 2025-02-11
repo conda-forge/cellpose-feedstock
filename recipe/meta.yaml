@@ -20,7 +20,7 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
