@@ -24,6 +24,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
+    - segment-anything  # Note: The conda-forge package is based on the PyPI 'segment-anything-py', not 'segment-anything'
     - fastremap
     - fill-voids
     - imagecodecs
