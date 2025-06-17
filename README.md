@@ -147,4 +147,6 @@ Feedstock Maintainers
 
 * [@carsen-stringer](https://github.com/carsen-stringer/)
 * [@goanpeca](https://github.com/goanpeca/)
+* [@mrariden](https://github.com/mrariden/)
+* [@stuarteberg](https://github.com/stuarteberg/)
 
