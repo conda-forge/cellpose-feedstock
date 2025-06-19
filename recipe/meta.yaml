@@ -25,6 +25,7 @@ requirements:
     - setuptools-scm
   run:
     - fastremap
+    - fill-voids
     - imagecodecs
     - llvmlite
     - matplotlib-base  # Imported but not declared as a dependency
