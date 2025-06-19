@@ -41,6 +41,7 @@ requirements:
     - scikit-image    # Imported but not declared as a dependency
     - tqdm
     # GUI Dependencies
+    - pyside6
     - pyqtgraph >=0.11.0rc0
     - qtpy
     - superqt
