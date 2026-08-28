@@ -1,5 +1,5 @@
 {% set name = "cellpose" %}
-{% set version = "4.1.1" %}
+{% set version = "4.2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
-  sha256: 859c732c8edede78ec7ee6537c5cfb18ab54f3dc01846adc10edca0cec124094
+  sha256: 229eedea3977184202b2c87b3bd41c609facd742c7203bb4ad3cebd7b6bc6839
 
 build:
   entry_points:
@@ -28,28 +28,32 @@ requirements:
     - fastremap
     - fill-voids
     - imagecodecs
-    - llvmlite
     - matplotlib-base  # Imported but not declared as a dependency
     - natsort
-    - numba >=0.53.0
     - numpy >=1.20.0
     - opencv
     - python >={{ python_min }}
-    - scipy
-    - tifffile
     - pytorch >=1.6
     - roifile
     - scikit-image    # Imported but not declared as a dependency
+    - scipy
+    - tifffile
+    - torchvision
     - tqdm
     # GUI Dependencies
     - pyside6
-    - pyqtgraph >=0.11.0rc0
+    - pyqtgraph >=0.12.4
     - qtpy
     - superqt
     # Distributed Dependencies
+    - bokeh
     - dask-core
     - dask-image
-    - scikit-learn
+    - dask-jobqueue
+    - distributed
+    - pyarrow
+    - pyyaml
+    - zarr
 
 test:
   imports:
