@@ -8,6 +8,11 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cellpose-{{ version }}.tar.gz
   sha256: 229eedea3977184202b2c87b3bd41c609facd742c7203bb4ad3cebd7b6bc6839
+  patches:
+    # The distribution that provides the `segment_anything` module is published
+    # on PyPI as `segment-anything-py`, so the requirement as declared upstream
+    # can never be satisfied and `pip check` reports it as missing.
+    - patches/0001-Depend-on-segment-anything-py-on-PyPI.patch
 
 build:
   entry_points:
@@ -24,7 +29,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - segment-anything  # Note: The conda-forge package is based on the PyPI 'segment-anything-py', not 'segment-anything'
+    - segment-anything  # Note: this conda-forge package is built from the PyPI 'segment-anything-py'; see the patch above
     - fastremap
     - fill-voids
     - imagecodecs

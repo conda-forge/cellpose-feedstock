@@ -1,0 +1,22 @@
+From: Mark Harfouche <mark@ramonaoptics.com>
+Subject: [PATCH] Depend on segment-anything-py, the real PyPI distribution
+
+The `segment_anything` name upstream declares is not a distribution that
+exists on PyPI: the package that provides the `segment_anything` module is
+published as `segment-anything-py`, and that is what the conda-forge
+`segment-anything` package installs. As declared, the requirement can never
+be satisfied and `pip check` always reports it as missing.
+
+diff --git a/setup.py b/setup.py
+index 85d03a1..fee64be 100644
+--- a/setup.py
++++ b/setup.py
+@@ -14,7 +14,7 @@ install_deps = [
+     'imagecodecs',
+     'roifile',
+     'fill-voids',
+-    'segment_anything',
++    'segment-anything-py',
+ ]
+ 
+ image_deps = ['nd2', 'pynrrd']
