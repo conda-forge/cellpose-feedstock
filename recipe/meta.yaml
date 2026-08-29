@@ -61,7 +61,7 @@ test:
     - cellpose.core
   commands:
     - pip list
-    # - pip check  # Fails due to opencv-python-headless
+    - pip check
     - cellpose --help
   requires:
     - pip
